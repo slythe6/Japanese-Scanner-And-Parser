@@ -6,14 +6,9 @@ using namespace std;
 
 /* Look for all **'s and complete them */
 
-//=====================================================
-// File scanner.cpp written by: Group Number: 8
-//=====================================================
-
 // --------- Two DFAs ---------------------------------
 
 // WORD DFA 
-// Done by: Simon Hausmaninger
 // RE:   ** \w*((a,e,i,o,u)|n)\b   WORD1 
 //          \w*(I|E)\b             WORD2
 bool word (string s)
@@ -152,7 +147,6 @@ bool word (string s)
 }
 
 // PERIOD DFA 
-// Done by: Simon Hausmaninger
 bool period (string s)
 {  // complete this **
   if(s[0] == '.') return true;
@@ -160,8 +154,6 @@ bool period (string s)
 }
 
 // ------ Three  Tables -------------------------------------
-
-// TABLES Done by: ** Kelsey Thomas
 
 // ** Update the tokentype to be WORD1, WORD2, PERIOD, ERROR, EOFM, etc.
 enum tokentype {WORD1, WORD2, VERB, VERBNEG, 
@@ -271,9 +263,6 @@ int scanner(tokentype& tt, string& w)
 
 
 // The temporary test driver to just call the scanner repeatedly  
-// This will go away after this assignment
-// DO NOT CHANGE THIS!!!!!! 
-// Done by:  Louis
 int main()
 {
   //debug - change word inside () and boolean  to whatever outcome is unexpected
